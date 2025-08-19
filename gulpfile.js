@@ -15,7 +15,7 @@ const execAsync = util.promisify(exec);
 
 // Delete images before resizing (cleanup)
 gulp.task('delete', function() {
-    return del(['images/fulls/*','images/thumbs/*']);
+    return del(['images/*.*']);
 });
 
 // Robust image processing using direct ImageMagick commands
@@ -114,8 +114,8 @@ gulp.task('minify-js', function() {
 // Build task
 gulp.task('build', gulp.series('sass', 'minify-js'));
 
-// Resize task - now deletes FIRST, then resizes
-gulp.task('resize', gulp.series('delete', 'resize-images'));
+// Resize task - now resizes first, then resize
+gulp.task('resize', gulp.series('resize-images','delete'));
 
 // Default task
 gulp.task('default', gulp.series('build', 'resize'));
