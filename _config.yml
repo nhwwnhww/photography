@@ -14,8 +14,8 @@ header:
  subtitle: "by Wei Weng"
 footer:
  name: "Hey there, my name is Wei"
- bio: "Keep learning photography."
- github: "Here is my github --> <a href=\"https://github.com/nhwwnhww"></a> ;)"
+ bio: "This is life"
+ github: "https://github.com/nhwwnhww"
 web_design: "AJ"
 # Configure which exif data to display
 # Tag is the actual exif tag, icon is a fontawesome icon. Use JSON notation without line breaks
